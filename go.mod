@@ -3,7 +3,6 @@ module TechnicalTestITONICS
 go 1.23
 
 require (
-	github.com/davecgh/go-spew v1.1.1
 	github.com/go-playground/validator/v10 v10.22.1
 	github.com/gofiber/fiber/v2 v2.52.5
 	github.com/joho/godotenv v1.5.1
