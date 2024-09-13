@@ -149,6 +149,9 @@ func GetBraineesByAuthor(c *fiber.Ctx) error {
 		}
 		brainees = append(brainees, brainee)
 	}
+	if brainees == nil {
+		return c.Status(http.StatusNotFound).JSON(responses.ErrorResponse{Status: http.StatusNotFound, Error: "Author name not found"})
+	}
 
 	return c.Status(http.StatusOK).JSON(responses.BraineesResponse{Status: http.StatusOK, Data: brainees})
 }
@@ -172,6 +175,9 @@ func GetBraineesByBrand(c *fiber.Ctx) error {
 			return c.Status(http.StatusInternalServerError).JSON(responses.ErrorResponse{Status: http.StatusInternalServerError, Error: err.Error()})
 		}
 		brainees = append(brainees, brainee)
+	}
+	if brainees == nil {
+		return c.Status(http.StatusNotFound).JSON(responses.ErrorResponse{Status: http.StatusNotFound, Error: "Brand name not found"})
 	}
 
 	return c.Status(http.StatusOK).JSON(responses.BraineesResponse{Status: http.StatusOK, Data: brainees})
