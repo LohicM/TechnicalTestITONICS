@@ -14,7 +14,6 @@ Loïc Marlard
 ## Prérequis
 
 - Golang version 1.23.1
-- Make (pour utiliser le Makefile)
 - Postman ou Insomnia
 
 Vous pouvez importer cette collection à postman ou à insomnia :
@@ -26,17 +25,6 @@ Vous pouvez importer cette collection à postman ou à insomnia :
 ## Installation
 
 Pour installer le projet :
-
-- Avec make
-
-```bash
-  make 
-```
-ou
-```bash
-  make install
-```
-- Avec Go
 
 ```bash
   go mod tidy
@@ -52,13 +40,6 @@ Pour lancer ce projet, vous aurez besoin de cette variable dans votre .env
 ## Lancement
 
 Pour lancer le projet :
-
-- Avec make
-
-```bash
-  make start
-```
-- Avec go
 
 ```bash
   go run main.go
